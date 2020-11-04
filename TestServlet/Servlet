@@ -1,0 +1,172 @@
+Interface Servlet
+			//只创建一个对象
+		
+  	void	init(ServletConfig config)  
+       		 Called by the servlet container to indicate to a servlet that the servlet is being placed into service.
+        	//只执行一次
+        	
+  	void	service(ServletRequest req, ServletResponse res)
+			Called by the servlet container to allow the servlet to respond to a request.
+		
+ 	 void	destroy()
+			 Called by the servlet container to indicate to a servlet that the servlet is being taken out of service.
+			 //web application 退出时
+
+abstract Class GenericServlet  implements Servlet
+
+   				    GenericServlet()
+					Does nothing.
+	
+			void	init(ServletConfig config)
+					Called by the servlet container to indicate to a servlet that the servlet is being placed into service.
+	
+    abstract void	service(ServletRequest req, ServletResponse res)
+		     		Called by the servlet container to allow the servlet to respond to a request.
+
+			void	destroy()
+					Called by the servlet container to indicate to a servlet that the servlet is being taken out of service.\
+		
+	ServletContext	getServletContext()
+					Returns a reference to the ServletContext in which this servlet is running.
+	
+	ServletConfig	getServletConfig()
+					Returns this servlet's ServletConfig object.
+	
+			String	getServletInfo()
+					Returns information about the servlet, such as author, version, and copyright.
+	
+			String	getServletName()
+					Returns the name of this servlet instance.
+					
+
+abstract Class HttpServlet extends GenericServlet
+
+				    HttpServlet()
+					Does nothing
+	
+	protected void	doGet(HttpServletRequest req, HttpServletResponse resp)
+					Called by the server (via the service method) to allow a servlet to handle a GET request.
+					
+	protected void	doPost(HttpServletRequest req, HttpServletResponse resp)
+					Called by the server (via the service method) to allow a servlet to handle a POST request.
+					
+	protected void	service(HttpServletRequest req, HttpServletResponse resp)
+					Receives standard HTTP requests from the public service method and dispatches them to the doXXX methods defined in this class.
+					
+	protected void	doDelete(HttpServletRequest req, HttpServletResponse resp)
+					Called by the server (via the service method) to allow a servlet to handle a DELETE request.
+					
+
+
+
+
+
+
+Interface ServletRequest
+	
+	ServletInputStream	getInputStream()
+						Retrieves the body of the request as binary data using a ServletInputStream.
+	
+	String	getParameter(String name)
+			Returns the value of a request parameter as a String, or null if the parameter does not exist.
+	
+	Map<String,String[]>	getParameterMap()
+			Returns a java.util.Map of the parameters of this request.
+	
+	Enumeration<String>	getParameterNames()
+			Returns an Enumeration of String objects containing the names of the parameters contained in this request.
+	
+	String[]	getParameterValues(String name)
+				Returns an array of String objects containing all of the values the given request parameter has, or null if the parameter does not exist.
+	
+	
+	
+	
+Interface HttpServletRequest  extends ServletRequest
+	
+	void	login(String username, String password)
+			Validate the provided username and password in the password validation realm used by the web container login mechanism configured for the ServletContext.
+
+	void	logout()
+			Establish null as the value returned when getUserPrincipal, getRemoteUser, and getAuthType is called on the request.
+			
+	
+	Cookie[]	getCookies()
+				Returns an array containing all of the Cookie objects the client sent with this request.
+				
+	HttpSession	getSession()
+				Returns the current session associated with this request, or if the request does not have a session, creates one.
+	
+	String	getRequestedSessionId()
+			Returns the session ID specified by the client.
+		
+	boolean	isRequestedSessionIdFromCookie()
+			Checks whether the requested session ID was conveyed to the server as an HTTP cookie.
+			
+	boolean	isRequestedSessionIdFromURL()
+			Checks whether the requested session ID was conveyed to the server as part of the request URL.
+		
+	boolean	isRequestedSessionIdValid()
+			Checks whether the requested session ID is still valid.
+			
+			
+			
+		
+		
+			
+			
+
+Interface ServletResponse
+	
+	ServletOutputStream	getOutputStream()
+						Returns a ServletOutputStream suitable for writing binary data in the response.
+	PrintWriter	getWriter()
+				Returns a PrintWriter object that can send character text to the client.
+	
+	String	getContentType()
+			Returns the content type used for the MIME body sent in this response.
+	
+	void	setContentType(String type)
+			Sets the content type of the response being sent to the client, if the response has not been committed yet.
+	
+	
+	
+Interface HttpServletResponse  extends ServletResponse
+
+	void	addCookie(Cookie cookie)
+			Adds the specified cookie to the response.
+	
+	void	sendRedirect(String location)
+			Sends a temporary redirect response to the client using the specified redirect location URL and clears the buffer.
+	
+	String	encodeRedirectURL(String url)
+			Encodes the specified URL for use in the sendRedirect method or, if encoding is not needed, returns the URL unchanged.
+			
+	void	addHeader(String name, String value)
+			Adds a response header with the given name and value.
+			   
+	String	getHeader(String name)
+			Gets the value of the response header with the given name.
+					
+	void	setHeader(String name, String value)
+			Sets a response header with the given name and value.
+					
+	int	   getStatus()
+		   Gets the current status code of this response.
+	
+	void	setStatus(int sc)
+			Sets the status code for this response.
+			
+	
+
+
+
+
+
+
+
+
+
+
+						
+	

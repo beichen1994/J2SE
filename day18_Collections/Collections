@@ -1,0 +1,35 @@
+Class Collections
+	针对集合进行操作，都是静态方法
+	
+	static <T extends Comparable<? super T>>
+	void	sort(List<T> list)
+			Sorts the specified list into ascending order, according to the natural ordering of its elements.
+			排序，默认情况下是自然排序
+	
+	static <T> void	sort(List<T> list, Comparator<? super T> c)
+					Sorts the specified list according to the order induced by the specified comparator.
+					比较器排序
+						
+	static <T>
+	int	binarySearch(List<? extends Comparable<? super T>> list, T key)
+		Searches the specified list for the specified object using the binary search algorithm.
+		二分查找
+	
+	static <T extends Object & Comparable<? super T>>
+	T	max(Collection<? extends T> coll)
+		Returns the maximum element of the given collection, according to the natural ordering of its elements.
+		最大值
+	
+	static void	reverse(List<?> list)
+				Reverses the order of the elements in the specified list.
+				反转
+				
+	static void	shuffle(List<?> list)
+				Randomly permutes the specified list using a default source of randomness.
+				随机置换
+		
+	
+	
+	
+	
+	

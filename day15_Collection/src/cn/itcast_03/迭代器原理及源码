@@ -1,0 +1,37 @@
+
+	Iterator 为什么定义为一个接口，而不是一个类
+		假如Iterator定义的是一个类，就可以创建对象并调用方法来实现集合遍历。
+		但是Java提供很多集合，而这些集合的数据结构是不同的，存储和遍历的方式是不同的。
+		就没有定义迭代器类
+		
+		把判断和获取提取出来，并不提供具体实现，就是接口
+		在真正的具体的子类中，以内部类的方式体现的
+		
+public interface Iterator{
+	public abstract boolean hasNext();
+	public abstract Object next();
+}	
+
+public interface Iterable{
+	Iterator iterator();
+}
+
+public interface Collection extends Iterable{
+
+}
+
+public interface List extends Collection{
+
+}
+
+public class ArrayList implements List {    
+	public Iterator iterator(){     //重写iterator方法
+		return new Itr();
+	}
+}
+
+private class Itr implements Iterator {
+	public boolean hasNext(){};			//实现hasNext()和next()
+	public Object next(){};
+}
+ 

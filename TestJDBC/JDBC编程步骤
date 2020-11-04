@@ -1,0 +1,14 @@
+1.Load the Driver
+	Class.forName("...");
+2.Connect to the DataBase
+	DriverManager.getConnection()
+3.Execute the SQL
+	Connection.createStatement()
+	Statement.executeQuery()
+	Statement.executeUpdate()
+4.Retrieve the result data
+	while(rs.next())
+5.Show the result data
+	rs.getXXX()
+6.Close
+	close the resultset/statement/connection

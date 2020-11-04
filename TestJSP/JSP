@@ -1,0 +1,83 @@
+JSP(Java Server Page)
+本质是Servlet
+直接在HTML中内嵌JSP代码
+JSP程序由JSP Engine 转换成Servlet代码，接着编译成类文件载入执行
+只有当客户端第一次请求JSP时，才需要转换，编译
+
+传统语法：
+	Declaration
+		<%!    %>
+	
+	Scriptlet
+		<%  Java代码  %>		
+		 
+	Expression
+		<%=  %>
+	
+	Comment
+	 	  <%--  --%>   
+		  <% //       %>  
+		  <%  /*  */ %>
+		  
+	Directives(编译期指令)
+		<%@ page 属性="属性值" %>  
+		<%@  include file = "fileURL"%>(编译期间编译，不能带参数)
+		<%@ taglib 属性 = "属性值"%>
+		
+
+		<%@ page  language = "script language
+				extends = "className"
+				import = "importList "		
+				error page = "url"
+				isErrorPage = "true/false"
+				contentType = "contentTypeInfo"
+	    %>
+	
+	Action(动作指令)
+		 <jsp:useBean>  </jsp:useBean>
+			 <jsp:setProperty>  </jsp:setProperty> 
+			 <jsp:getproperty >  </jsp:getproperty > 
+		
+		<jsp:include>  </jsp:include>  (再编译期间不会被编译，只有在客户执行时才载入，可以带参数)
+			 <jsp:param >  </jsp:param > (用来设定include文件时的参数和对应的值)
+		
+		<jsp:forward>  </jsp:forward> (将一个jsp的内容传送到指定的URL)
+	    	<jsp:param >  </jsp:param > 
+	    
+	    <jsp:plugin>  </jsp:plugin> 
+	
+	<jsp:useBean id ="beanName" scope ="page/request/session/application" class ="package.BeanClass" type ="typeName">
+		<jsp:setProperty name =""  property ="" value ="" />
+		<jsp:getProperty name =""  property =""/>
+	</jsp:useBean>
+		
+	<jsp:include page= "URL" flush ="true">
+		<jsp:param name ="ParamName" value = "paramValue"/>
+	</jsp:include>
+	
+	<jsp:forward page ="URL" flush ="true"/>
+		<jsp:param name ="paramName" value ="paramValue"/>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	内置对象

@@ -1,0 +1,127 @@
+
+Map集合和Collection集合的区别
+	Map集合存储元素是成对出现的，Map集合的键是唯一的，值是可重复的
+	Collection集合存储元素是单独出现的
+
+
+
+
+
+Interface Map<K,V>
+	An object that maps keys to values. A map cannot contain duplicate keys; each key can map to at most one value.
+	
+
+		添加	  	V 	put(K key, V value)
+					Associates the specified value with the specified key in this map (optional operation).
+					如果键是第一次存储，就直接存储元素，返回null
+					如果键已经存在，就用值把以前的值替换掉，返回以前的值
+					
+		删除		V	remove(Object key)
+					Removes the mapping for a key from this map if it is present (optional operation).
+			
+			boolean	remove(Object key, Object value)
+					Removes the entry for the specified key only if it is currently mapped to the specified value.
+					
+			void	clear()
+					Removes all of the mappings from this map (optional operation).
+			
+		获取 	V 	 get(Object key)
+			   		 Returns the value to which the specified key is mapped, or null if this map contains no mapping for the key.
+					根据键获取值	
+						
+Set<Map.Entry<K,V>>  entrySet()
+			         Returns a Set view of the mappings contained in this map.
+					 获取所有键值对
+					
+			Set<K>	 keySet()
+					 Returns a Set view of the keys contained in this map.
+					获取所有键
+					
+	Collection<V>	values()
+					Returns a Collection view of the values contained in this map.
+					获取所有值
+	 	
+	长度			    int	size()
+					Returns the number of key-value mappings in this map.
+		
+	判断	   boolean  isEmpty()
+					Returns true if this map contains no key-value mappings.
+			
+			boolean	containsKey(Object key)
+					Returns true if this map contains a mapping for the specified key.
+			
+			boolean	containsValue(Object value)
+					Returns true if this map maps one or more keys to the specified value.
+			
+				
+			int		hashCode()
+					Returns the hash code value for this map.
+	
+		default V	replace(K key, V value)
+					Replaces the entry for the specified key only if it is currently mapped to some value.
+			
+	
+	
+	
+	
+	
+ class HashMap<K,V>	  implements Map<K,V>
+		
+		HashMap(Map<? extends K,? extends V> m)
+		Constructs a new HashMap with the same mappings as the specified Map.
+		
+
+
+		
+		
+  class TreeMap<K,V>	implements NavigableMap<K,V>
+		底层数据结构是红黑树(自平衡二叉树)
+		
+		TreeMap()
+		Constructs a new, empty tree map, using the natural ordering of its keys.
+	
+		TreeMap(Comparator<? super K> comparator)
+		Constructs a new, empty tree map, ordered according to the given comparator.
+		
+			
+		TreeMap(Map<? extends K,? extends V> m)
+		Constructs a new tree map containing the same mappings as the given map, ordered according to the natural ordering of its keys.
+		
+		TreeMap(SortedMap<K,? extends V> m)
+		Constructs a new tree map containing the same mappings and using the same ordering as the specified sorted map.
+		
+		
+		
+	
+class Hashtable<K,V>  implements Map<K,V>
+	
+		Hashtable(Map<? extends K,? extends V> t)
+		Constructs a new hashtable with the same mappings as the given Map.
+		
+	Enumeration<V>	elements()
+					Returns an enumeration of the values in this hashtable.
+					
+	Enumeration<K>	keys()
+					Returns an enumeration of the keys in this hashtable.
+					
+			String	toString()
+					Returns a string representation of this Hashtable object in the form of a set of entries, enclosed in braces and separated by the ASCII characters ", " (comma and space).
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

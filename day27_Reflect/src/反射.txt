@@ -1,0 +1,12 @@
+类加载器：将.class文件加载到内存中，并生成Class对象
+
+	Bootstrap ClassLoader   String System...
+	Extension ClassLoader	JRE扩展目录中的jar包
+	System ClassLoader		来自java命令
+	
+	Class :
+			String--> .class(字节码文件对象)
+			System--> .class
+
+反射： 就是通过.class文件对象，使用该文件中的成员变量，构造方法，成员方法
+

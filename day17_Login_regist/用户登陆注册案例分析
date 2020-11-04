@@ -1,0 +1,25 @@
+需求： 用户登陆注册案例
+
+
+分析：
+	有哪些类：	
+		用户基本描述类
+		用户操作类
+		测试类
+	每个类有哪些东西：
+		用户基本描述类：
+			用户名，密码
+			无参构造
+			getXxx()/setXxx
+		用户操作类：
+			登陆 注册
+		测试类：
+			main方法
+
+		
+		
+分包：
+	用户基本描述类包 cn.itcast.pojo(plain ordinary java object)
+	用户操作接口包cn.itcast.dao
+	用户操作类包cn.itcast.dao.impl
+	用户测试类包cn.itcast.test

@@ -1,0 +1,37 @@
+abstract Class ServletInputStream  extends InputStream
+
+				ServletInputStream()
+				Does nothing
+				
+			int	readLine(byte[] b, int off, int len)
+				Reads the input stream, one line at a time.
+
+
+abstract Class ServletOutputStream  extends OutputStream
+
+					ServletOutputStream()
+					Does nothing
+					
+			void	write(byte[] b)   
+					Writes b.length bytes from the specified byte array to this output stream.
+		
+	
+
+Class PrintWriter extends Writer
+  
+  		PrintWriter(OutputStream out)
+		Creates a new PrintWriter, without automatic line flushing, from an existing OutputStream.
+  
+  		PrintWriter(Writer out)
+  		Creates a new PrintWriter, without automatic line flushing.
+  		
+  		PrintWriter(String fileName)
+		Creates a new PrintWriter, without automatic line flushing, with the specified file name.		
+  		
+  		PrintWriter(File file)
+		Creates a new PrintWriter, without automatic line flushing, with the specified file.		
+  
+		void	println(Object x)
+				Prints an Object and then terminates the line.
+ 
+ 

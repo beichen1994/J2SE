@@ -1,0 +1,45 @@
+Http协议无连接性要求出现保存c/s间状态的机制
+
+Cookie：保存在客户端的一个文本文件
+		以 name-value的形式保存数据
+
+Cookie 分两种：
+		文本文件永久保存保存在客户端
+		临时的仅属于某一个窗口
+				
+一个Servlet/JSP设置的Cookie能被同一URL或者子路径下面的Servlet/JSP读到
+		
+Class Cookie 	
+	
+	Cookie(String name, String value)
+	Constructs a cookie with the specified name and value.
+	
+	String	getName()
+			Returns the name of the cookie.
+			
+	String	getValue()
+			Gets the current value of this Cookie.
+			
+	int		getMaxAge()
+			Gets the maximum age in seconds of this Cookie.
+	
+	String	getPath()
+			Returns the path on the server to which the browser returns this cookie.
+	
+	boolean	isHttpOnly()
+			Checks whether this Cookie has been marked as HttpOnly.
+			
+	void	setValue(String newValue)
+			Assigns a new value to this Cookie.
+			
+	void	setMaxAge(int expiry)
+			Sets the maximum age in seconds for this Cookie.
+			
+	void	setPath(String uri)
+			Specifies a path for the cookie to which the client should return the cookie.
+			
+	void	setHttpOnly(boolean isHttpOnly)
+			Marks or unmarks this Cookie as HttpOnly.
+			
+
+			

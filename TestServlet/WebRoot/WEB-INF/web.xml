@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <display-name></display-name>	
+  
+  	<welcome-file-list>
+  		<welcome-file>index.jsp</welcome-file>
+  	</welcome-file-list>
+    
+    
+    <servlet>
+    	<servlet-name>HW</servlet-name>
+    	<servlet-class>HelloWorldServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+    	<servlet-name>HW</servlet-name>
+    	<url-pattern>/abc</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>TestLifeCycleServlet</servlet-name>
+    	<servlet-class>TestLifeCycleServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+    	<servlet-name>TestLifeCycleServlet</servlet-name>
+    	<url-pattern>/TestLifeCycleServlet</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+    	<servlet-name>ThreeParams</servlet-name>
+    	<servlet-class>ThreeParams</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+    	<servlet-name>ThreeParams</servlet-name>
+    	<url-pattern>/Servlet/ThreeParams</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+    	<servlet-name>ShowParameters</servlet-name>
+    	<servlet-class>ShowParameters</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+    	<servlet-name>ShowParameters</servlet-name>
+    	<url-pattern>/Servlet/ShowParameters</url-pattern>
+    </servlet-mapping>
+ 
+ 
+ 	 <servlet>
+    	<servlet-name>ShowCookies</servlet-name>
+    	<servlet-class>ShowCookies</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+    	<servlet-name>ShowCookies</servlet-name>
+    	<url-pattern>/Servlet/ShowCookies</url-pattern>
+    </servlet-mapping>
+ 
+ 	
+    <servlet>
+    	<servlet-name>SetCookies</servlet-name>
+    	<servlet-class>SetCookies</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+    	<servlet-name>SetCookies</servlet-name>
+    	<url-pattern>/Servlet/SetCookies</url-pattern>
+    </servlet-mapping>
+    
+    
+  	 <servlet>
+    	<servlet-name>SessionInfoServlet</servlet-name>
+    	<servlet-class>SessionInfoServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+    	<servlet-name>SessionInfoServlet</servlet-name>
+    	<url-pattern>/Servlet/SessionInfoServlet</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+    	<servlet-name>ShowSession</servlet-name>
+    	<servlet-class>ShowSession</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+    	<servlet-name>ShowSession</servlet-name>
+    	<url-pattern>/Servlet/ShowSession</url-pattern>
+    </servlet-mapping>
+ 
+ 
+     <servlet>
+    	<servlet-name>TestServletContext</servlet-name>
+    	<servlet-class>TestServletContext</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+    	<servlet-name>TestServletContext</servlet-name>
+    	<url-pattern>/Servlet/TestServletContext</url-pattern>
+    </servlet-mapping>
+ 
+      <servlet>
+    	<servlet-name>ShowRs</servlet-name>
+    	<servlet-class>ShowRs</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+    	<servlet-name>ShowRs</servlet-name>
+    	<url-pattern>/Servlet/ShowRs</url-pattern>
+    </servlet-mapping>
+ 
+  
+      <servlet>
+    	<servlet-name>ShowRsUseBean</servlet-name>
+    	<servlet-class>ShowRsUseBean</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+    	<servlet-name>ShowRsUseBean</servlet-name>
+    	<url-pattern>/Servlet/ShowRsUseBean</url-pattern>
+    </servlet-mapping>
+ 
+</web-app>

@@ -1,0 +1,16 @@
+Application(ServletContext):
+	用于保存整个web应用生命周期内都可以访问的数据
+每个浏览器共享Application
+
+
+
+Interface ServletContext
+
+	Object	getAttribute(String name)
+			Returns the servlet container attribute with the given name, or null if there is no attribute by that name.
+			
+	Enumeration<String>	getAttributeNames()
+						Returns an Enumeration containing the attribute names available within this ServletContext.
+						
+	void	setAttribute(String name, Object object)
+			Binds an object to a given attribute name in this ServletContext.

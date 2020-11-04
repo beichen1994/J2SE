@@ -1,0 +1,51 @@
+java程序读取数据  为输入流
+java程序写出数据  为输出流
+
+ byte stream  (basic)
+   Abstract Class InputStream  
+   Abstract Class OutputStream
+   
+   		FileInputStream
+   		FileOutputStream
+   		
+   		BufferedInputStream
+   		BufferedOutputStream
+   		
+   		
+ 由于字节流处理中文不方便
+Java 提供转换流
+字符流 = 字节流 + 编码表
+   		
+   
+ character stream 
+   Class Reader
+   Class Writer 
+   		
+   		InputStreamReader   ----	FileReader
+   		OutputStreamWriter	----	FileWriter
+   		
+   		BufferedReader
+   		BufferedWriter
+   		
+   		
+   		
+   		
+
+编码表：
+ASCII码表 ：		1byte表示    
+		    	0  48           0*******
+				A  65
+				a  97
+		
+ISO-8895-1( 拉丁码表 )：    1byte 表示
+
+GB2312(简体中文码表):  2byte 表示
+GBK(升级版)
+GB18030(GBK替代版)
+
+Unicode(国际标准码表) : 2byte表示
+  UTF-8 : 1byte  2byte 或 3byte 表示
+  
+  0*******
+  110***** 10******
+  1110**** 10****** 10******
